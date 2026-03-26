@@ -1,0 +1,16 @@
+fastapi
+uvicorn
+mcp
+httpx
+streamlit
+google-generativeai
+python-dotenv
+
+
+
+neo4j~=5.28
+tqdm
+python-dotenv
+requests
+spacy>=3.0
+scispacy
