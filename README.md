@@ -12,13 +12,13 @@ MedBridge focuses on reconciling clinical signals across three critical layers:
 
 ## 📊 Data Overview & Use Cases
 
-| Data Source                 | Type                  | Key Entities                                   | Potential ML/AI Use Cases                                             |
-| :-------------------------- | :-------------------- | :--------------------------------------------- | :-------------------------------------------------------------------- |
-| **MIMIC-IV**          | Clinical Records      | Patients, Lab Events, Prescriptions, Diagnoses | Mortality prediction, Length of Stay (LOS), Sepsis/AKI risk scoring   |
-| **OMOP (Athena)**     | Standardized Ontology | Concepts (SNOMED, RxNorm, ICD), Relationships  | Entity normalization, patient cohort building, domain-specific search |
-| **PubMed Baseline**   | Scientific Literature | Articles, Abstracts, Keywords, Citations       | RAG for medical Q&A, Knowledge Graph extraction, Semantic Search      |
-| **DrugBank (Kaggle)** | Drug Safety           | Drugs, Drug-Drug Interactions (DDI)            | Interaction prediction, drug repositioning, treatment safety guards   |
-| **Clinical Signals**  | Derived Graph         | Patient-Condition-Drug-Article nodes & edges   | Graph Neural Networks (GNNs), link prediction, explainable medical AI |
+| Data Source                                                                   | Type                  | Key Entities                                   | Potential ML/AI Use Cases                                             |
+| :---------------------------------------------------------------------------- | :-------------------- | :--------------------------------------------- | :-------------------------------------------------------------------- |
+| [**MIMIC-IV**](https://physionet.org/content/mimiciv/2.2/)                    | Clinical Records      | Patients, Lab Events, Prescriptions, Diagnoses | Mortality prediction, Length of Stay (LOS), Sepsis/AKI risk scoring   |
+| [**OMOP (Athena)**](https://athena.ohdsi.org)                                 | Standardized Ontology | Concepts (SNOMED, RxNorm, ICD), Relationships  | Entity normalization, patient cohort building, domain-specific search |
+| [**PubMed Baseline**](https://ftp.ncbi.nlm.nih.gov/pubmed/baseline/)           | Scientific Literature | Articles, Abstracts, Keywords, Citations       | RAG for medical Q&A, Knowledge Graph extraction, Semantic Search      |
+| [**DrugBank (Kaggle)**](https://www.kaggle.com/datasets/mghobashy/drug-drug-interactions) | Drug Safety           | Drugs, Drug-Drug Interactions (DDI)            | Interaction prediction, drug repositioning, treatment safety guards   |
+| **Clinical Signals**                                                          | Derived Graph         | Patient-Condition-Drug-Article nodes & edges   | Graph Neural Networks (GNNs), link prediction, explainable medical AI |
 
 ---
 
