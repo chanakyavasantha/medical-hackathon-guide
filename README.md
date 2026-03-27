@@ -94,6 +94,17 @@ chmod +x populate_graph.sh
 
 ---
 
+## 📁 Repository Structure
+
+The repository is organized by use-case to help you find relevant resources quickly:
+
+-   [**llm_applications/**](./llm_applications/): Guides and notebooks for using LLMs (like MedGemma) with clinical data.
+-   [**ml_dl/**](./ml_dl/): Resources for classical ML, Deep Learning, and Graph Neural Networks.
+-   **scripts/**: Core ingestion and graph population logic.
+-   **data/**: Local storage for your downloaded datasets.
+
+---
+
 ## 💡 ML/AI Project Ideas
 
 Beyond building the Knowledge Graph, here are some high-impact ways you can use this data for ML/AI projects:
