@@ -12,13 +12,16 @@ MedBridge focuses on reconciling clinical signals across three critical layers:
 
 ## 📊 Data Overview & Use Cases
 
-| Data Source           | Type                  | Download Link                                                                 | Potential ML/AI Use Cases                                             |
-| :-------------------- | :-------------------- | :---------------------------------------------------------------------------- | :-------------------------------------------------------------------- |
-| **MIMIC-IV**          | Clinical Records      | [PhysioNet (v2.2)](https://physionet.org/content/mimiciv/2.2/)                | Mortality prediction, Length of Stay (LOS), Sepsis/AKI risk scoring   |
-| **OMOP (Athena)**     | Standardized Ontology | [OHDSI Athena](https://athena.ohdsi.org)                                      | Entity normalization, patient cohort building, domain-specific search |
-| **PubMed Baseline**   | Scientific Literature | [NCBI FTP Baseline](https://ftp.ncbi.nlm.nih.gov/pubmed/baseline/)            | RAG for medical Q&A, Knowledge Graph extraction, Semantic Search      |
-| **DrugBank (Kaggle)** | Drug Safety           | [Kaggle DDI Dataset](https://www.kaggle.com/datasets/mghobashy/drug-drug-interactions) | Interaction prediction, drug repositioning, treatment safety guards   |
-| **Clinical Signals**  | Derived Graph         | *Build using provided scripts*                                                | Graph Neural Networks (GNNs), link prediction, explainable medical AI |
+| Data Source           | Type                  | Download Link                                                                 | What the Data Contains                                                                | Potential ML/AI Use Cases                                             |
+| :-------------------- | :-------------------- | :---------------------------------------------------------------------------- | :------------------------------------------------------------------------------------ | :-------------------------------------------------------------------- |
+| **MIMIC-IV**          | Clinical Records      | [PhysioNet (v2.2)](https://physionet.org/content/mimiciv/2.2/)                | Electronic health records including demographics, vitals, lab events, and diagnoses.  | Mortality prediction, Length of Stay (LOS), Sepsis/AKI risk scoring   |
+| **OMOP (Athena)**     | Standardized Ontology | [OHDSI Athena](https://athena.ohdsi.org)                                      | Standardized vocabulary mappings connecting clinical codes (ICD, SNOMED, RxNorm).     | Entity normalization, patient cohort building, domain-specific search |
+| **PubMed Baseline**   | Scientific Literature | [NCBI FTP Baseline](https://ftp.ncbi.nlm.nih.gov/pubmed/baseline/)            | Millions of biomedical abstracts, citations, and metadata from scientific literature. | RAG for medical Q&A, Knowledge Graph extraction, Semantic Search      |
+| **DrugBank (Kaggle)** | Drug Safety           | [Kaggle DDI Dataset](https://www.kaggle.com/datasets/mghobashy/drug-drug-interactions) | Comprehensive drug-drug interaction pairs and safety pharmacology data.               | Interaction prediction, drug repositioning, treatment safety guards   |
+| **Clinical Signals**  | Derived Graph         | *Build using provided scripts*                                                | Derived knowledge graph edges extracted via NLP and database schemas.                 | Graph Neural Networks (GNNs), link prediction, explainable medical AI |
+| **MIMIC-IV-ED**       | Emergency Data        | [PhysioNet (v2.2)](https://physionet.org/content/mimic-iv-ed/2.2/)            | ED timestamps, patient vitals, chief complaints, and patient demographics.            | **Impact Project - Triage Equity**: Model wait times and audit algorithm outputs to mitigate unfair demographic biases in triage allocation. |
+| **MIMIC-CXR**         | Medical Imaging       | [PhysioNet (v2.0.0)](https://physionet.org/content/mimic-cxr/2.0.0/)          | Hundreds of thousands of DICOM chest X-rays paired with unstructured clinical notes.  | **Impact Project - Bias Mitigation**: Train vision classification models (e.g., pneumonia) and explicitly penalize unequal performance across distinct racial and gender lines. |
+| **CDC SVI**           | Public Health / SDOH  | [CDC SVI Database](https://www.atsdr.cdc.gov/placeandhealth/svi/data_documentation_download.html) | Neighborhood stress indices tracking poverty, housing issues, and transportation.     | **Impact Project - SDOH Integration**: Merge with clinical records to predict how socioeconomic vulnerability alters clinical recovery and readmission risk, empowering non-clinical social interventions. |
 
 ---
 
@@ -130,6 +133,8 @@ Beyond building the Knowledge Graph, here are some high-impact ways you can use 
 
 - **Treatment Suggestion**: Suggest safer alternative medications for patients with high-risk drug-drug interaction profiles.
 - **Phenotype Discovery**: Group patients into clusters based on their medical journeys to discover new disease subtypes.
+
+
 
 ---
 
